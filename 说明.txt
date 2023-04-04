@@ -1,0 +1,27 @@
+新建虚拟环境（仅第一次）：
+python -m venv venv
+
+切换到虚拟环境venv（每次，未处于虚拟环境时）：
+如果是powershell，执行脚本
+.\venv\Scripts\Activate.ps1
+cmd环境下执行.bat结尾的批处理文件
+
+安装所需模块（仅第一次）：
+python -m pip install -r requirements.txt
+
+启动服务（每次）
+uvicorn main:app --reload --port 9000 --host 0.0.0.0
+
+----
+
+用户上传图片的数据文件：格式的暂时约定参考“图片数据.json”
+用户上传的用于生成图片的脚本：参考“图片脚本.py”
+请求格式参考：“图片刷新请求”
+响应返回base64图片字符串
+请求url：@app.post("/api/data-img")
+
+----
+
+用户上传的计算用普通脚本：参考“普通脚本”
+请求格式参考：“普通脚本调用请求.json”
+请求url：@app.post("/api/script")

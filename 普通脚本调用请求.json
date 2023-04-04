@@ -1,0 +1,8 @@
+{
+    "code": "from typing import Tuple\ndef add(a: float, b: float) -> Tuple[float, ...]:\n    return a + b, a - b\nresult = add(**kwargs)",
+    "return_name": "result",
+    "args": {
+        "a": 1,
+        "b": 6
+    }
+}
